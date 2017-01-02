@@ -2,14 +2,79 @@
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<title>Fantasy Hockey Assistant</title>
+		<link rel="stylesheet" href="assets/stylesheets/main.css">
+		<meta charset="utf-8">		
+		<title>FH Assistant</title>
+		
+		<script>
+			function addPlayer(name /*FOR TESTING PURPOSES --> */= "bobrose") {
+				var div_playerRank = document.getElementById("player_ranker");
+				var bioTemplate = document.getElementById("template_player-bio");
+				var newBio = bioTemplate.content.cloneNode(true);
+				
+				var namebox = newBio.getElementById("namebox");
+				var imgbox = newBio.getElementById("photo");
+				namebox.innerHTML = name;
+				imgbox.alt = name;
+				imgbox.src = imgbox.src + name + "01-2015.jpg";
+				
+				div_playerRank.appendChild(newBio);
+			}
+		</script>
+		
 	</head>
 	
 	<body>
-		<h1>Player 1</h1>
-		<p>This is player 1</p>
-		<h1>Player 2</h1>
-		<p>This is player 2</p>
+		<form>
+			Add Player
+			<input type="text" name="playername">
+			<input type="button" value="Submit" onclick="addPlayer()">
+		</form>
+		
+		
+		<!--Scrolling Container-->
+		<div id="player_ranker" style="overflow-y:auto">
+			<!-- Player Bio -->
+			<div id="bobrovsky_bio" class="player-bio">
+				<span style="display:inline-block; width:70px">
+					<button style="width:70px">Upvote</button>
+					<button style="width:70px">Downvote</button>
+				</span>
+				
+				<img vertical-align="top" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/bobrose01-2015.jpg" alt="Sergei Bobrovsky"
+				height="200" width="150"/>
+				
+				<span id="namebox">Sergei Bobrovsky</span>
+			</div>
+			
+			<!-- Player Bio -->
+			<div id="varlamov-bio" class="player-bio">
+				<span style="display:inline-block; width:70px">
+					<button style="width:70px">Upvote</button>
+					<button style="width:70px">Downvote</button>
+				</span>
+				
+				<img vertical-align="top" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/varlasi01-2015.jpg" alt="Semyon Varlamov"
+				height="200" width="150"/>
+				
+				<span id="namebox">Semyon Varlamov</span>
+			</div>
+		<div>
 	</body>
+	
+	<!--New Player Row Template-->
+	<template id="template_player-bio">
+		<div class="player-bio">
+			<span style="display:inline-block; width:70px">
+				<button style="width:70px">Upvote</button>
+				<button style="width:70px">Downvote</button>
+			</span>
+			
+			<img id="photo" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/"
+			alt="NAME" style="vertical-align:top; height:200px; width:150px;"/>
+			
+			<span id="namebox">NAME</span>
+		</div>
+	</template>
+	
 </html>
