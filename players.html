@@ -6,68 +6,26 @@
 		<meta charset="utf-8">		
 		<title>FH Assistant</title>
 		
-		<script>
-			function addPlayer(name /*FOR TESTING PURPOSES --> */= "bobrose") {
-				var div_playerRank = document.getElementById("player_ranker");
-				var bioTemplate = document.getElementById("template_player-bio");
-				var newBio = bioTemplate.content.cloneNode(true);
-				
-				var namebox = newBio.getElementById("namebox");
-				var imgbox = newBio.getElementById("photo");
-				namebox.innerHTML = name;
-				imgbox.alt = name;
-				imgbox.src = imgbox.src + name + "01-2015.jpg";
-				
-				div_playerRank.appendChild(newBio);
-			}
-		</script>
-		
+		<script src="main.js"></script>
 	</head>
 	
 	<body>
-		<form>
-			Add Player
-			<input type="text" name="playername">
-			<input type="button" value="Submit" onclick="addPlayer()">
-		</form>
-		
-		
+		<input id="firstnamebox" type="text" style="width:90px" name="playername" placeholder="First Name">
+		<input id="lastnamebox" type="text" style="width:90px" name="playername" placeholder="Last Name">
+		<input type="button" value="Add Player" onclick="addPlayer()">
+	
 		<!--Scrolling Container-->
-		<div id="player_ranker" style="overflow-y:auto">
-			<!-- Player Bio -->
-			<div id="bobrovsky_bio" class="player-bio">
-				<span style="display:inline-block; width:70px">
-					<button style="width:70px">Upvote</button>
-					<button style="width:70px">Downvote</button>
-				</span>
-				
-				<img vertical-align="top" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/bobrose01-2015.jpg" alt="Sergei Bobrovsky"
-				height="200" width="150"/>
-				
-				<span id="namebox">Sergei Bobrovsky</span>
-			</div>
-			
-			<!-- Player Bio -->
-			<div id="varlamov-bio" class="player-bio">
-				<span style="display:inline-block; width:70px">
-					<button style="width:70px">Upvote</button>
-					<button style="width:70px">Downvote</button>
-				</span>
-				
-				<img vertical-align="top" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/varlasi01-2015.jpg" alt="Semyon Varlamov"
-				height="200" width="150"/>
-				
-				<span id="namebox">Semyon Varlamov</span>
-			</div>
-		<div>
+		<div id="player_ranker" style="overflow-y:auto"></div>
 	</body>
 	
 	<!--New Player Row Template-->
 	<template id="template_player-bio">
 		<div class="player-bio">
-			<span style="display:inline-block; width:70px">
-				<button style="width:70px">Upvote</button>
-				<button style="width:70px">Downvote</button>
+			<span style="display:inline-block; width:25px;">
+				<input type="image" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Green-Up-Arrow.svg" 
+				       style="width:25px" id="upvoteBtn" onclick="Upvote(this)"/>
+				<input type="image" src="https://upload.wikimedia.org/wikipedia/commons/6/62/RedDownArrow.svg" 
+				       style="width:25px" id="downvoteBtn" onclick="Downvote(this)"/>
 			</span>
 			
 			<img id="photo" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/"
