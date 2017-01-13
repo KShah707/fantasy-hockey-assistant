@@ -15,7 +15,7 @@ function addPlayer() {
 	var bioTemplate = document.getElementById("template_player-bio");
 	var newBio = bioTemplate.content.cloneNode(true);
 	
-	var namebox = newBio.getElementById("namebox");
+	/*var namebox = newBio.getElementById("namebox");
 	var imgbox = newBio.getElementById("photo");
 	namebox.innerHTML = fullName;
 	imgbox.alt = fullName;
@@ -24,7 +24,7 @@ function addPlayer() {
 	if (playerList.indexOf(fullName) < 0)
 		playerList.push(fullName);
 		scoreList.push(0);
-	}
+	}*/
 	div_playerRank.appendChild(newBio);
 	
 	firstNameBox.value = "";
@@ -33,7 +33,7 @@ function addPlayer() {
 
 function Upvote(elem) {
 	//parent is span, its parent is entire row, 
-	var playerName = elem.parentNode.parentNode.getElementById().innerHTML;
+	//var playerName = elem.parentNode.parentNode.getElementById().innerHTML;
 }
 
 function Downvote(elem) {
