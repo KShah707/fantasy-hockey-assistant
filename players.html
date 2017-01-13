@@ -3,33 +3,36 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="assets/stylesheets/main.css">
+		<script type="text/javascript" src="main.js"/></script>
 		<meta charset="utf-8">		
 		<title>FH Assistant</title>
-		
-		<script src="main.js"></script>
 	</head>
 	
 	<body>
-		<input id="firstnamebox" type="text" style="width:90px" name="playername" placeholder="First Name">
-		<input id="lastnamebox" type="text" style="width:90px" name="playername" placeholder="Last Name">
-		<input type="button" value="Add Player" onclick="addPlayer()">
-	
+		<form>
+			Add Player
+			<input type="text" name="firstname" id="firstnamebox">
+			<input type="text" name="lastname" id="lastnamebox">
+			<input type="button" value="Submit" onclick="addPlayer()">
+		</form>
+		
+		
 		<!--Scrolling Container-->
-		<div id="player_ranker" style="overflow-y:auto"></div>
+		<div id="player_ranker" style="overflow-y:auto">
+		
+		<div>
 	</body>
 	
 	<!--New Player Row Template-->
 	<template id="template_player-bio">
 		<div class="player-bio">
-			<span style="display:inline-block; width:25px;">
-				<input type="image" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Green-Up-Arrow.svg" 
-				       style="width:25px" id="upvoteBtn" onclick="Upvote(this)"/>
-				<input type="image" src="https://upload.wikimedia.org/wikipedia/commons/6/62/RedDownArrow.svg" 
-				       style="width:25px" id="downvoteBtn" onclick="Downvote(this)"/>
+			<span style="display:inline-block; width:70px">
+				<button style="width:70px">Upvote</button>
+				<button style="width:70px">Downvote</button>
 			</span>
 			
 			<img id="photo" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/"
-			alt="NAME" style="vertical-align:top; height:200px; width:150px;"/>
+			alt="NAME" style="vertical-align:middle; height:200px; width:150px;"/>
 			
 			<span id="namebox">NAME</span>
 		</div>
