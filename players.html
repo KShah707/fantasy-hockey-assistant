@@ -9,10 +9,14 @@
 	</head>
 	
 	<body>
+		
+		<h1>Fantasy Hockey Player Ranker</h1>
+		<h2>Search for players, rank them before draft, and export your lists!</h2>
+		
 		<form>
 			Add Player
-			<input type="text" name="firstname" id="firstnamebox">
-			<input type="text" name="lastname" id="lastnamebox">
+			<input type="text" placeholder="Firstname" name="firstname" id="firstnamebox" class="namebox">
+			<input type="text" placeholder="Lastname" name="lastname" id="lastnamebox" class="namebox">
 			<input type="button" value="Submit" onclick="addPlayer()">
 		</form>
 		
@@ -26,9 +30,11 @@
 	<!--New Player Row Template-->
 	<template id="template_player-bio">
 		<div class="player-bio">
-			<span style="display:inline-block; width:70px">
-				<button style="width:70px">Upvote</button>
-				<button style="width:70px">Downvote</button>
+			<span style="display:inline-block; vertical-align:middle; width:40px">
+				<input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRQeGv_FH0FOgrhyufUM3HbBGZGX_fmUnAaOPbEIrKTGiTAZHiuFb5mwVM"
+				       style="width: 40px" onclick="Upvote(this)"></input>
+				<input type="image" src="http://www.clipartkid.com/images/27/download-public-domain-ihtHTQ-clipart.png"
+				       style="width: 40px" onclick="Downvote(this)"></input>
 			</span>
 			
 			<img id="photo" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/"
