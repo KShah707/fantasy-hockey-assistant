@@ -11,8 +11,8 @@
 	<body>
 		<form>
 			Add Player
-			<input type="text" name="firstname" id="firstnamebox">
-			<input type="text" name="lastname" id="lastnamebox">
+			<input type="text" placeholder="Firstname" name="firstname" id="firstnamebox">
+			<input type="text" placeholder="Lastname" name="lastname" id="lastnamebox">
 			<input type="button" value="Submit" onclick="addPlayer()">
 		</form>
 		
@@ -27,8 +27,8 @@
 	<template id="template_player-bio">
 		<div class="player-bio">
 			<span style="display:inline-block; width:70px">
-				<button style="width:70px">Upvote</button>
-				<button style="width:70px">Downvote</button>
+				<button style="width:80px" onclick="Upvote(this)">Move Up</button>
+				<button style="width:80px" onclick="Downvote(this)">Move Down</button>
 			</span>
 			
 			<img id="photo" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/"
