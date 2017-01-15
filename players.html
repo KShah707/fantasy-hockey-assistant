@@ -10,37 +10,40 @@
 	
 	<body>
 		
-		<h1>Fantasy Hockey Player Ranker</h1>
-		<h2>Search for players, rank them before draft, and export your lists!</h2>
-		
-		<form>
-			Add Player
-			<input type="text" placeholder="Firstname" name="firstname" id="firstnamebox" class="namebox">
-			<input type="text" placeholder="Lastname" name="lastname" id="lastnamebox" class="namebox">
-			<input type="button" value="Submit" onclick="addPlayer()">
-		</form>
-		
+		<header id="page-header">
+			<h1>Fantasy Hockey Player Ranker</h1>
+			<h2>Search for players, rank them before draft, and save your lists!</h2>
+			
+			<form id="header-form">
+				Add Player: 
+				<input type="text" placeholder="Firstname" name="firstname" id="firstnamebox" class="header-namebox">
+				<input type="text" placeholder="Lastname" name="lastname" id="lastnamebox" class="header-namebox">
+				<input type="button" value="Submit" onclick="addPlayer()" class="header-btn">
+			</form>
+		</header>
 		
 		<!--Scrolling Container-->
-		<div id="player_ranker" style="overflow-y:auto">
-		
-		<div>
+		<div id="player_ranker" style="overflow-y:auto"></div>
 	</body>
 	
 	<!--New Player Row Template-->
 	<template id="template_player-bio">
 		<div class="player-bio">
-			<span style="display:inline-block; vertical-align:middle; width:40px">
-				<input type="image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRQeGv_FH0FOgrhyufUM3HbBGZGX_fmUnAaOPbEIrKTGiTAZHiuFb5mwVM"
-				       style="width: 40px" onclick="Upvote(this)"></input>
-				<input type="image" src="http://www.clipartkid.com/images/27/download-public-domain-ihtHTQ-clipart.png"
-				       style="width: 40px" onclick="Downvote(this)"></input>
+			<span style="display: inline-block; vertical-align: middle; width: 35px;">
+				<input type="image" src="http://www.clipartkid.com/images/849/31-up-arrow-png-free-cliparts-that-you-can-download-to-you-computer-CxRu0x-clipart.png"
+				    style="width: 35px" onclick="Upvote(this)"></input>
+				<input type="image" src="http://www.clipartkid.	com/images/27/download-public-domain-ihtHTQ-clipart.png"
+				    style="width: 35px" onclick="Downvote(this)"></input>
 			</span>
 			
 			<img id="photo" src="https://d9kjk42l7bfqz.cloudfront.net/req/201610011/images/headshots/"
 			alt="NAME" style="vertical-align:middle; height:200px; width:150px;"/>
 			
-			<span id="namebox">NAME</span>
+			<span id="row-namebox">
+				NAME
+			
+				<!-- stats table goes here -->
+			</span>
 		</div>
 	</template>
 	

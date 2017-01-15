@@ -1,3 +1,4 @@
+/* CSS Reset */
 html, body, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,18 +18,6 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
-
-em,i {
-	font-style:italic;
-}
-strong,b {
-	font-weight:bold;
-}
-
-code {	
-	font-style:italic;
-	font-weight:bold;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -56,3 +45,96 @@ table {
 }
 
 /***************************************************/
+body { /* Taken from www.uigradients.com "Red Ocean" */
+	background: #1D4350; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #1D4350 , #A43931); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #1D4350 , #A43931); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#page-header {
+	background: #FFFFFF;
+	border-bottom-style: solid;
+	border-bottom-width: 12px;
+	border-bottom-color: #F0F0F0;
+}
+
+#header-form {
+	padding: 20px;
+	padding-top: 0px;
+	font-family: Verdana, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	color: #1D4350;
+	font-size: 20px;
+}
+
+.header-namebox { /* Two boxes to enter First and Last names */
+	font-family: Verdana, sans-serif;
+	font-size: 20px;
+	margin: 3px;
+	width: 26%;
+	border-style: none;
+	border-bottom-style: solid;
+	border-bottom-color: #1D4350;
+}
+
+.header-btn {
+	color: #1D4350;
+	font-family: Verdana, sans-serif;
+	font-size: 20px;
+	background-color: #F0F0F0;
+	border-style: solid;
+	border-color: #1D4350;
+	padding: 5px;
+}
+
+.player-bio { /* player info row */
+	background: rgba(256, 256, 256, 0.3);
+	border-bottom-style: solid;
+	border-bottom-width: 5px;
+	border-bottom-color: #F0F0F0;
+	padding: 10px;
+}
+
+#photo {
+	border-style: solid;
+	border-width: 6px;
+	border-color: #000000;
+	margin: 10px;
+}
+
+#row-namebox {
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	color: #FFFFFF;
+}
+
+h1 {
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 40px;
+	color: #A43931;
+	padding: 20px;
+	padding-bottom: 10px;
+}
+h2 {
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	color: #1D4350;
+	padding: 20px;
+	padding-top: 0px;
+}
+
+em,i {
+	font-style: italic;
+}
+strong,b {
+	font-weight: bold;
+}
+
+code {	
+	font-style:italic;
+	font-weight:bold;
+}

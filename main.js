@@ -11,7 +11,7 @@ function addPlayer() {
 	var bioTemplate = document.getElementById("template_player-bio");
 	var newBio = bioTemplate.content.cloneNode(true);
 	
-	var namebox = newBio.getElementById("namebox");
+	var namebox = newBio.getElementById("row-namebox");
 	var imgbox = newBio.getElementById("photo");
 	namebox.innerHTML = fullName;
 	imgbox.alt = fullName;
